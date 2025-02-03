@@ -2,7 +2,7 @@ namespace Lib
 {
     public class Library
     {
-        int index = 0;
+        private int index = 0;
         private Book[] books;
         public Library ()
         {
