@@ -1,6 +1,6 @@
 namespace Lib
 {
-    public class Library
+    class Library
     {
         private int index = 0;
         private Book[] books;
