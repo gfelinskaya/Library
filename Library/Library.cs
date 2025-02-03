@@ -1,12 +1,12 @@
 namespace Lib
 {
-    internal class Library
+    public class Library
     {
         int index = 0;
-        private Book [] books;
+        private Book[] books;
         public Library ()
         {
-            books = new Book [100];
+            books = new Book[100];
         }
         public void Add (Book book)
         {

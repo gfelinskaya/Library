@@ -1,6 +1,6 @@
 namespace Lib
 {
-    internal class Book
+    public class Book
     {
         string author;
         string title;

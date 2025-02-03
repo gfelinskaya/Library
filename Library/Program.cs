@@ -1,6 +1,6 @@
 ﻿namespace Lib
 {
-    internal class Program
+    public class Program
     {
         static void Main()
         {
@@ -17,8 +17,8 @@
            forMen.Open();   
            
            Library newLibrary = new Library();   
-           newLibrary.Add(forChildren, 0);
-           newLibrary.Add(forMen, 1);
+           newLibrary.Add(forChildren);
+           newLibrary.Add(forMen);
         }
     }
 }
