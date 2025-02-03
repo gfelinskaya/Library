@@ -1,8 +1,6 @@
-using Microsoft.VisualBasic;
-
-namespace Library
+namespace Lib
 {
-    internal class Book
+    public class Book
     {
         string author;
         string title;
@@ -15,14 +13,14 @@ namespace Library
         public float Price { get => price; set => price = value; }
         public float Discount { get => discount; set => discount = value; }
         public uint PageSize { get => pageSize;}
-        public Book(string bookAuthor, string bookTitle, uint bookPageSize, float bookPrice, float bookDiscount)
+
+        public Book(string bookAuthor, string bookTitle, uint bookPageSize)
         {
           author = bookAuthor;
           title = bookTitle;
           pageSize = bookPageSize;
-          price = bookPrice;
-          discount = bookDiscount;
         }
+
         public void Open()
         {
             Console.WriteLine($"Ви відкрили книгу {Title} автора {Author} за оригінальною ціною {Price} зі знижкою {Discount} відсотків, к-сть сторінок {PageSize}");

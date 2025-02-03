@@ -1,13 +1,24 @@
-﻿namespace Library
+﻿namespace Lib
 {
-    internal class Program
+    public class Program
     {
         static void Main()
         {
-           Book forChildren = new Book("Lebiha", "Boys", 287, 67.7f, 22); 
-           Book forMen = new Book("Moroz", "realMen", 567, 98.4f, 34);
+           Book forChildren = new Book("Lebiha", "Boys", 287); 
+           forChildren.Price = 23;
+           forChildren.Discount = 20;
+
+           Book forMen = new Book("Moroz", "realMen", 567);
+           forMen.Price = 78;
+           forMen.Discount = 37;
+
            forChildren.Open(); 
-           forMen.Open();      
+
+           forMen.Open();   
+           
+           Library newLibrary = new Library();   
+           newLibrary.Add(forChildren);
+           newLibrary.Add(forMen);
         }
     }
 }
