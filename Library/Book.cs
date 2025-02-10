@@ -2,23 +2,49 @@ namespace Lib
 {
     public class Book
     {
-        string author;
-        string title;
-        float price;
-        float discount;
-        uint pageSize;
+        private float discount;
+        public string Author { get;}
+        public string Title { get;}
+        public float Price { get; set;}
+        public float Discount 
+        { 
+            get
+            {
+                if (discount == 0) 
+                {
+                    if (Price < 200)
+                    {
+                        discount = 0;
+                    }
+                    else if (Price >= 200 && Price < 500)
+                    {
+                        discount = 10;
+                    }
+                    else if (Price >= 500 && Price < 1000)
+                    {
+                        discount = 20;
+                    }
+                    else if (Price >= 1000)
+                    {
+                        discount = 25;
+                    }
+                }
+                return discount;
+            }
+            set
+            {
+                if (value > 0 && value < 100)
+                {
+                    discount = value;
+                }
+            }
+        }
+        public uint PageSize { get; init;}
 
-        public string Author { get => author;}
-        public string Title { get => title;}
-        public float Price { get => price; set => price = value; }
-        public float Discount { get => discount; set => discount = value; }
-        public uint PageSize { get => pageSize;}
-
-        public Book(string bookAuthor, string bookTitle, uint bookPageSize)
+        public Book(string bookAuthor, string bookTitle)
         {
-          author = bookAuthor;
-          title = bookTitle;
-          pageSize = bookPageSize;
+          Author = bookAuthor;
+          Title = bookTitle;
         }
 
         public void Open()
