@@ -12,13 +12,18 @@
            forMen.Price = 78;
            forMen.Discount = 37;
 
+           byte[] images = new byte[] { 65, 66, 67, 68 };
+           Book forWomenWithImages = new BookWithImages ("Roll", "Woman", images) {PageSize = 234};
+           forMen.Price = 78;
+           forMen.Discount = 37;
+
            forChildren.Open(); 
 
            forMen.Open();   
            
            Library newLibrary = new Library();   
-           newLibrary.Add(forChildren);
-           newLibrary.Add(forMen);
+           newLibrary.AddBook(forChildren);
+           newLibrary.AddBook(forMen);
         }
     }
 }
