@@ -14,12 +14,6 @@ namespace Lib
             index++;
             BubbleSortByFirstLetterOfAuthor();
         }
-         public void AddBook (BookWithImages book)
-        {
-            books[index] = book;
-            index++;
-            BubbleSortByFirstLetterOfAuthor();
-        }
         private void BubbleSortByFirstLetterOfAuthor()
         {
             // Алгоритм бульбашки для сортування

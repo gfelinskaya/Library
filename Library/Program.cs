@@ -17,6 +17,8 @@
            forMen.Price = 78;
            forMen.Discount = 37;
 
+           forWomenWithImages.Open();
+
            forChildren.Open(); 
 
            forMen.Open();   
