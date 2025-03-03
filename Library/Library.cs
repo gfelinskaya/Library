@@ -8,7 +8,7 @@ namespace Lib
         {
             books = new Book[100];
         }
-        public void AddBook (Book book)
+        public void Add (Book book)
         {
             books[index] = book;
             index++;
