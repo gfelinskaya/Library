@@ -50,6 +50,11 @@ namespace Lib
         public void Open()
         {
             Console.WriteLine($"Ви відкрили книгу {Title} автора {Author} за оригінальною ціною {Price} зі знижкою {Discount} відсотків, к-сть сторінок {PageSize}");
+            if (this is BookWithImages)
+            {
+            var book = this as BookWithImages;
+            Console.WriteLine($"Ілюстрація {book.ImageCover[0]}");
+            }
         }
     }
 }
