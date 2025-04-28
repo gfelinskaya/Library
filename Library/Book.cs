@@ -53,7 +53,7 @@ namespace Lib
             if (this is BookWithImages)
             {
             var book = this as BookWithImages;
-            Console.WriteLine($"Перший байт {book.Images[0]}");
+            Console.WriteLine($"Ілюстрація {book.ImageCover[0]}");
             }
         }
     }
