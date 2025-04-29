@@ -24,8 +24,19 @@
            forMen.Open();   
            
            Library newLibrary = new Library();   
+           
            newLibrary.Add(forChildren);
            newLibrary.Add(forMen);
+           
+
+           Book firstBook = newLibrary[0];
+           Book secondBook = newLibrary[1];
+           Book morozBook = newLibrary["Moroz"];
+           Book fakeBook = newLibrary["Fake"];
+Console.WriteLine($"First book {firstBook.Title}");
+Console.WriteLine($"S3econd book {secondBook.Title}");
+Console.WriteLine($"morozBook {morozBook.Title}");
+Console.WriteLine($"fakeBook {fakeBook.Title}");
         }
     }
 }
